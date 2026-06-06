@@ -4,26 +4,26 @@ import { useState, useEffect } from "react";
 const NAV_PAGES = ["Home", "About", "Gallery", "Shop"];
 
 const GALLERY_ITEMS = [
-  { id: 1, label: "Pull Day", tag: "TRAINING", cat: "Training" },
-  { id: 2, label: "Ring Work", tag: "CALISTHENICS", cat: "Skills" },
-  { id: 3, label: "Morning Flow", tag: "ROUTINE", cat: "Training" },
-  { id: 4, label: "Muscle Up", tag: "SKILL", cat: "Skills" },
-  { id: 5, label: "Core Series", tag: "STRENGTH", cat: "Training" },
-  { id: 6, label: "Planche Prog.", tag: "PROGRESS", cat: "Progress" },
-  { id: 7, label: "Bar Circuit", tag: "TRAINING", cat: "Training" },
-  { id: 8, label: "Handstand Work", tag: "SKILL", cat: "Skills" },
+  { id: 1, label: "Morning Run", tag: "RUNNING", cat: "Running" },
+  { id: 2, label: "Pull Day", tag: "CALISTHENICS", cat: "Training" },
+  { id: 3, label: "5K PB", tag: "MILESTONE", cat: "Running" },
+  { id: 4, label: "Bar Work", tag: "STRENGTH", cat: "Training" },
+  { id: 5, label: "Track Session", tag: "RUNNING", cat: "Running" },
+  { id: 6, label: "Core & Push", tag: "TRAINING", cat: "Training" },
+  { id: 7, label: "Road Miles", tag: "ENDURANCE", cat: "Running" },
+  { id: 8, label: "Muscle Up", tag: "SKILL", cat: "Training" },
   { id: 9, label: "Weekly Check In", tag: "PROGRESS", cat: "Progress" },
 ];
 
 const PRODUCTS = [
-  { name: "Training Tee", price: "£35", tag: "BESTSELLER" },
-  { name: "Calis Shorts", price: "£45", tag: "NEW" },
+  { name: "Performance Tee", price: "£35", tag: "BESTSELLER" },
+  { name: "Run Shorts", price: "£40", tag: "NEW" },
   { name: "TYYB Hoodie", price: "£65", tag: "NEW" },
-  { name: "Grip Socks", price: "£12", tag: null },
+  { name: "Training Socks", price: "£12", tag: null },
 ];
 
 const PILLARS = [
-  { n: "01", title: "BODY WEIGHT", sub: "Master your own weight. No machines, no excuses. Your body is the gym." },
+  { n: "01", title: "MOVE EVERY DAY", sub: "Run, train, repeat. Every discipline counts — no single path to fitness." },
   { n: "02", title: "SIMPLICITY", sub: "Strip everything back. The basics done brilliantly, every single day." },
   { n: "03", title: "AUTHENTIC", sub: "Real progress, real people, real gear. No filters on the work." },
 ];
@@ -113,7 +113,7 @@ const GLOBAL_CSS = `
 
 // ── TICKER ─────────────────────────────────────────────────────────────────
 function Ticker() {
-  const words = ["THE YOUNGEST YOU'LL BE", "CALISTHENICS", "MOVE FREELY", "BODY WEIGHT", "AUTHENTIC GEAR", "TRAIN DAILY", "NO EXCUSES"];
+  const words = ["THE YOUNGEST YOU'LL BE", "RUN FURTHER", "TRAIN HARDER", "MOVE FREELY", "CALISTHENICS", "AUTHENTIC GEAR", "NO EXCUSES"];
   const repeated = [...words, ...words];
   return (
     <div style={{ overflow: "hidden", borderTop: "1px solid #1a1a14", borderBottom: "1px solid #1a1a14", padding: "12px 0", background: "#080806" }}>
@@ -202,7 +202,7 @@ function PageHome({ setPage }) {
             <span style={{ display: "block", animation: "slideUp 0.5s 0.3s both" }}>YOU'LL BE</span>
           </h1>
           <p style={{ fontSize: 16, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.55, maxWidth: 480, lineHeight: 1.75, marginBottom: 36, animation: "slideUp 0.5s 0.4s both" }}>
-            A calisthenics brand built on body weight, simplicity, and authenticity. You're at the youngest you'll ever be — the moment to move is right now.
+            A fitness and activewear brand built for people who move. Whether you run the streets or train the bars — TYYB gear keeps up. You're at the youngest you'll ever be. Start now.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", animation: "slideUp 0.5s 0.5s both" }}>
             <button className="btn-primary" onClick={() => { setPage("Shop"); window.scrollTo(0,0); }}>Shop The Drop</button>
@@ -223,10 +223,10 @@ function PageHome({ setPage }) {
           </div>
           <div>
             <p style={{ fontSize: 16, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.6, lineHeight: 1.85, marginBottom: 20 }}>
-              TYYB was built on one idea: that the body you have right now is enough to start. No gym membership. No excuses. Just movement, consistency, and gear that keeps up with you.
+              TYYB was built for people who move. Runners, calisthenics athletes, anyone who shows up and puts in the work — this brand is for you.
             </p>
             <p style={{ fontSize: 16, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.6, lineHeight: 1.85 }}>
-              Every week we drop new content and new kit — all rooted in calisthenics and the belief that progress is a daily practice.
+              Every piece of kit is designed around real training — whether that's clocking road miles at 6am or hitting the bar park after work. Functional, minimal, built to last.
             </p>
           </div>
         </div>
@@ -319,18 +319,18 @@ function PageAbout() {
           </div>
           <div style={{ paddingTop: 8 }}>
             <p style={{ fontSize: 17, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.65, lineHeight: 1.85, marginBottom: 24 }}>
-              TYYB started with a single idea and a pull-up bar. No gym, no team, no budget — just the belief that body weight training is one of the purest forms of movement there is.
+              TYYB started with a pull-up bar and a pair of running shoes. No gym, no team, no budget — just the belief that movement in any form is the foundation of everything.
             </p>
             <p style={{ fontSize: 17, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.65, lineHeight: 1.85, marginBottom: 24 }}>
-              The brand grew out of the content — documenting real sessions, real progress, real failure. No highlight reel. Just the grind, filmed and shared with people who get it.
+              Whether it's clocking miles on the road or working the bars in the park — the brand documents real training, real progress, real failure. No highlight reel.
             </p>
             <p style={{ fontSize: 17, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.65, lineHeight: 1.85, marginBottom: 36 }}>
-              The name says everything. Right now, in this moment — you are the youngest you will ever be. That's not a motivational quote. That's a reason to start today.
+              The name says everything. Right now, in this moment — you are the youngest you will ever be. That's not a motivational quote. That's a reason to move today.
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <span className="tag-pill">CALISTHENICS</span>
-              <span className="tag-pill">STREET TRAINING</span>
-              <span className="tag-pill">BODY WEIGHT</span>
+              <span className="tag-pill">RUNNING</span>
+              <span className="tag-pill">ACTIVEWEAR</span>
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@ function PageAbout() {
 
 // ── PAGE: GALLERY ──────────────────────────────────────────────────────────
 function PageGallery() {
-  const CATS = ["All", "Training", "Skills", "Progress"];
+  const CATS = ["All", "Running", "Training", "Progress"];
   const [cat, setCat] = useState("All");
   const filtered = cat === "All" ? GALLERY_ITEMS : GALLERY_ITEMS.filter(g => g.cat === cat);
   return (
@@ -365,7 +365,7 @@ function PageGallery() {
           THE<br /><span style={{ color: "#8a9e7a" }}>MOVEMENT</span>
         </h1>
         <p style={{ fontSize: 15, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.5, maxWidth: 480, lineHeight: 1.8 }}>
-          Real sessions, real progress. Everything documented from bar work to ring strength — unfiltered, unedited.
+          Road miles, bar sessions, track work and progress checks — all documented, all real. No filters on the grind.
         </p>
       </section>
 
@@ -414,7 +414,7 @@ function PageShop() {
           WEAR THE<br /><span style={{ color: "#8a9e7a" }}>MOVEMENT</span>
         </h1>
         <p style={{ fontSize: 15, fontFamily: "'Barlow', sans-serif", fontWeight: 300, opacity: 0.5, maxWidth: 480, lineHeight: 1.8 }}>
-          Kit built for movement. Every piece designed around how you actually train — functional, minimal, built to last.
+          Kit built for every discipline. Whether you're running roads or training bars — functional, minimal, built to last.
         </p>
       </section>
       <section style={{ padding: "48px 32px 80px" }}>
@@ -463,7 +463,7 @@ function Footer({ setPage }) {
             </div>
             <span style={{ fontSize: 9, letterSpacing: "0.3em", opacity: 0.4, fontWeight: 700, textTransform: "uppercase" }}>The Youngest You'll Be</span>
           </div>
-          <p style={{ fontSize: 13, opacity: 0.4, fontFamily: "'Barlow', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>Calisthenics. Simplicity. Authentic movement.</p>
+          <p style={{ fontSize: 13, opacity: 0.4, fontFamily: "'Barlow', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>Run. Train. Move. Repeat.</p>
         </div>
         <div>
           <div style={{ fontSize: 10, letterSpacing: "0.3em", fontWeight: 800, opacity: 0.4, marginBottom: 16 }}>NAVIGATE</div>
